@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>РАССВЕТ</title>
+    <link rel="alternate icon" href="favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg?v=3">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="instrument">
+      <header class="top">
+        <h1>РАССВЕТ</h1>
+      </header>
+      <section class="visual" aria-label="Пульсирующий цветовой градиент">
+        <div class="gradient gradient-a"></div>
+        <div class="gradient gradient-b"></div>
+      </section>
+      <section class="console" aria-label="Управление синтезатором">
+        <div class="transport">
+          <button class="start" aria-pressed="false" aria-label="Запустить синтезатор"></button>
+          <div>
+            <span class="transport-title">START / STOP</span>
+          </div>
+          <label class="master">
+            ОБЩАЯ ГРОМКОСТЬ
+            <input id="master" type="range" min="0" max="100" value="55">
+          </label>
+        </div>
+        <div class="modules">
+          <article class="module" data-track="0">
+            <div class="module-head">
+              <div>
+                <h2>ДЫХАНИЕ</h2>
+              </div>
+              <span class="symbol" aria-hidden="true">◉</span>
+            </div>
+            <div class="controls">
+              <label>
+                ГРОМКОСТЬ
+                <input type="range" data-param="volume" min="0" max="100" value="60">
+              </label>
+              <label>
+                ГЛУБИНА
+                <input type="range" data-param="tone" min="0" max="100" value="48">
+              </label>
+            </div>
+            <div class="actions">
+              <button class="toggle" aria-pressed="false">ВКЛЮЧИТЬ</button>
+              <button class="solo" aria-pressed="false">SOLO</button>
+            </div>
+          </article>
+          <article class="module" data-track="1">
+            <div class="module-head">
+              <div>
+                <h2>ОТБЛЕСК</h2>
+              </div>
+              <span class="symbol" aria-hidden="true">✳</span>
+            </div>
+            <div class="controls">
+              <label>
+                ГРОМКОСТЬ
+                <input type="range" data-param="volume" min="0" max="100" value="45">
+              </label>
+              <label>
+                ВЫСОТА
+                <input type="range" data-param="tone" min="0" max="100" value="50">
+              </label>
+            </div>
+            <div class="actions">
+              <button class="toggle" aria-pressed="false">ВКЛЮЧИТЬ</button>
+              <button class="solo" aria-pressed="false">SOLO</button>
+            </div>
+          </article>
+          <article class="module" data-track="2">
+            <div class="module-head">
+              <div>
+                <h2>ВОЛНА</h2>
+              </div>
+              <span class="symbol" aria-hidden="true">≈</span>
+            </div>
+            <div class="controls">
+              <label>
+                ГРОМКОСТЬ
+                <input type="range" data-param="volume" min="0" max="100" value="40">
+              </label>
+              <label>
+                ТЕПЛО
+                <input type="range" data-param="tone" min="0" max="100" value="45">
+              </label>
+            </div>
+            <div class="actions">
+              <button class="toggle" aria-pressed="false">ВКЛЮЧИТЬ</button>
+              <button class="solo" aria-pressed="false">SOLO</button>
+            </div>
+          </article>
+          <article class="module" data-track="3">
+            <div class="module-head">
+              <div>
+                <h2>ПУЛЬС</h2>
+              </div>
+              <span class="symbol" aria-hidden="true">⋯</span>
+            </div>
+            <div class="controls">
+              <label>
+                ГРОМКОСТЬ
+                <input type="range" data-param="volume" min="0" max="100" value="60">
+              </label>
+              <label>
+                ЧАСТОТА
+                <input type="range" data-param="tone" min="0" max="100" value="40">
+              </label>
+            </div>
+            <div class="actions">
+              <button class="toggle" aria-pressed="false">ВКЛЮЧИТЬ</button>
+              <button class="solo" aria-pressed="false">SOLO</button>
+            </div>
+          </article>
+        </div>
+        <span class="status" role="status" aria-live="polite"></span>
+      </section>
+    </main>
+  </body>
+</html>
